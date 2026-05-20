@@ -47,26 +47,3 @@ contenedores.forEach(contenedor => {
     moverTexto();
 });
 
-// ANIMACIÓN PROGRAMACIÓN DIARIA
-const programas = document.querySelectorAll('.programacion-diaria-programa');
-
-if (programas.length > 0) { 
-    programas[0].classList.add('programa-visible');
-}
-
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting && !entry.target.classList.contains('programa-visible')) {
-            entry.target.classList.add('programa-visible');
-        }
-    });
-}, { threshold: 0.1 });
-
-programas.forEach(programaProgramacionDiaria => observer.observe(programaProgramacionDiaria));
-
-function getVisibleProgramas() {
-    return Array.from(programas).filter(programaProgramacionDiaria => {
-        const rect = programaProgramacionDiaria.getBoundingClientRect();
-        return rect.top < window.innerHeight && rect.bottom > 0;
-    });
-}

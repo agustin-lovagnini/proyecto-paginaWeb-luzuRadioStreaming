@@ -33,7 +33,6 @@ body {
 }
 
 .pagina-index .texto-negrita,
-.pagina-index .boton-programacion-diaria,
 .pagina-index .boton-flotante-vivo,
 .pagina-index .texto-iformacion-programa,
 .pagina-index .mensaje-ondemand-contenido span,
@@ -172,11 +171,6 @@ header {
   height: 55px;
 }
 
-.boton-programacion-diaria {
-  font-weight: 600;
-  list-style-type: none;
-}
-
 .boton-estandar {
   border-radius: 9px;
   padding: 15px;
@@ -186,8 +180,7 @@ header {
 
 /*? ---  Despliegue del menú hamburguesa --- */
 .redes-sociales,
-.tienda img,
-.boton-programacion-diaria a {
+.tienda img {
   margin-bottom: 12px;
 }
 
@@ -433,8 +426,7 @@ iframe {
   text-shadow: 0px 0px 7px #000;
 }
 
-.imagen-elenco,
-.programacion-diaria-img-contenedor-elencos {
+.imagen-elenco {
   bottom: 0;
   right: var(--custom-right, 0);
   filter: drop-shadow(3px 1px 0 #000);
@@ -455,84 +447,6 @@ iframe {
 
 .right-costum {
   right: var(--custom-right);
-}
-
-/*!--- PAGINA PROGRAMACION DIARIA ---*/
-.contenido-programacion-diaria {
-  gap: 55px;
-  padding: 30px;
-  position: relative;
-  z-index: 1;
-}
-
-.programacion-diaria-programa {
-  margin: 0 auto;
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
-}
-
-.programa-visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.programacion-diaria-programa a {
-  color: inherit;
-  justify-items: center;
-  cursor: pointer;
-  border: 3px solid var(--bg-color-icons);
-  border-radius: 30px;
-  position: relative;
-  z-index: 5000;
-}
-
-.img-contenido-programas {
-  position: relative;
-  -webkit-mask-image: linear-gradient(to bottom,
-      black 0%,
-      black 60%,
-      rgba(0, 0, 0, 0.8) 80%,
-      rgba(0, 0, 0, 0.4) 100%,
-      transparent 100%);
-  mask-image: linear-gradient(to bottom,
-      black 0%,
-      black 60%,
-      rgba(0, 0, 0, 0.8) 80%,
-      rgba(0, 0, 0, 0.4) 100%,
-      transparent 100%);
-}
-
-.programacion-diaria-img-programa {
-  width: 100%;
-  height: auto;
-  aspect-ratio: 16/9;
-  object-fit: cover;
-
-}
-
-.informacion-programa {
-  padding: 10px 20px 20px 20px;
-  border-radius: 25px;
-}
-
-.titulo-programa {
-  font-size: 24px;
-  font-weight: 800;
-  margin-bottom: 10px;
-  text-decoration: underline;
-  text-underline-offset: 6px;
-}
-
-.descripcion-programa {
-  font-size: 1rem;
-  line-height: 1.5;
-}
-
-.horario-programa {
-  margin: 15px 0 0 0;
-  font: 900 18px var(--font-principal);
-  top: 10px;
 }
 
 /**---  SECTION FOOTER  ---*/
@@ -632,8 +546,7 @@ footer {
   }
 
   .redes-sociales,
-  .tienda img,
-  .boton-programacion-diaria a {
+  .tienda img {
     margin-bottom: 0;
   }
 
@@ -642,14 +555,9 @@ footer {
     display: none;
   }
 
-  .boton-programacion-diaria a,
   .contenedor-vivo-escritorio a {
     padding: 10px;
     font-size: 13px;
-  }
-
-  .boton-programacion-diaria a {
-    margin: auto 10px;
   }
 
   .redes-sociales .botones-redes {
@@ -662,10 +570,6 @@ footer {
     display: block;
     justify-content: center;
     align-items: center;
-    order: -1;
-  }
-
-  .boton-programacion-diaria {
     order: -1;
   }
 
@@ -793,91 +697,6 @@ footer {
     display: block;
     font-size: 14px;
     margin-bottom: 6px;
-  }
-
-  /*!--- PAGINA PROGRAMACION DIARIA ---*/
-  .contenido-programacion-diaria {
-    padding: clamp(20px, 2.5vw, 80px) clamp(15px, 6vw, 145px);
-    gap: 70px;
-    max-width: 1200px;
-    margin: 0 auto;
-    width: 80%;
-  }
-
-  .programacion-diaria-programa a {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    transition: box-shadow 0.3s ease, transform 0.3s ease;
-  }
-
-  .programacion-diaria-programa a:hover {
-    transform: scale(1.02);
-    box-shadow: 0 0px 20px rgba(155, 89, 182, 0.9),
-      0 0 10px rgba(155, 89, 182, 1.4), 0 0 30px rgba(155, 89, 182, 1.2);
-  }
-
-  .programacion-diaria-programa:nth-child(even) a {
-    flex-direction: row-reverse;
-  }
-
-  .img-contenido-programas {
-    width: 55%;
-  }
-
-  .programacion-diaria-programa:nth-child(odd) .img-contenido-programas {
-    justify-content: flex-end;
-  }
-
-  .programacion-diaria-programa:nth-child(even) .img-contenido-programas {
-    justify-content: flex-start;
-  }
-
-  .programacion-diaria-programa:nth-child(even) .programacion-diaria-img-programa {
-    mask-image: linear-gradient(to left, black 70%, transparent 90%);
-    -webkit-mask-image: linear-gradient(to left, black 70%, transparent 90%);
-    border-top-right-radius: 27px;
-    border-bottom-right-radius: 27px;
-  }
-
-  .programacion-diaria-programa:nth-child(odd) .programacion-diaria-img-programa {
-    mask-image: linear-gradient(to right, black 70%, transparent 90%);
-    -webkit-mask-image: linear-gradient(to right, black 70%, transparent 90%);
-    border-top-left-radius: 27px;
-    border-bottom-left-radius: 27px;
-  }
-
-  .informacion-programa {
-    position: relative;
-    width: 45%;
-    padding: 0 30px;
-    text-align: center;
-    justify-content: center;
-  }
-
-  .programacion-diaria-programa:nth-child(even) .informacion-programa {
-    position: relative;
-    left: 2.5%;
-  }
-
-  .programacion-diaria-programa:nth-child(odd) .informacion-programa {
-    position: relative;
-    left: -0.5%;
-  }
-
-  .titulo-programa {
-    font-size: 30px;
-    line-height: 1.2;
-  }
-
-  .descripcion-programa {
-    margin-bottom: 10px;
-    line-height: 1.4;
-  }
-
-  .horario-programa {
-    font-size: 22px;
-    margin-top: auto;
   }
 
   /**---  SECTION FOOTER  ---*/

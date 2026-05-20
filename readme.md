@@ -3,12 +3,10 @@
 ## Introducción
 Este proyecto es una página web no oficial inspirada en LuzuTV, creada como rediseño visual y funcional de una experiencia de streaming, radio y programación online.
 
-La página busca reunir en un solo sitio el acceso al vivo, las redes sociales, la programación diaria y una galería de programas con sus horarios, fondos visuales y elencos. El objetivo principal es lograr una interfaz moderna, clara, responsive y fácil de navegar desde celular, tablet o escritorio.
+La página busca reunir en un solo sitio el acceso al vivo, las redes sociales y una galería de programas con sus horarios, fondos visuales y elencos. El objetivo principal es lograr una interfaz moderna, clara, responsive y fácil de navegar desde celular, tablet o escritorio.
 
 ## ¿De qué va el proyecto?
 El sitio funciona como una fan page de LuzuTV. Incluye una página principal con presentación visual, acceso al streaming en vivo, enlaces a redes sociales y una galería actualizada de programas.
-
-También cuenta con una página de programación diaria, donde se muestra una grilla visual y tarjetas con información de algunos programas, sus horarios, descripciones y elencos.
 
 La estructura de imágenes de programas está organizada en carpetas por programa dentro de:
 
@@ -137,21 +135,12 @@ La identidad visual del sitio se apoya en una base oscura, texto claro y acentos
 ### Página de inicio
 ![Presentación inicio](img/readme/vista-descktop/presentacion-index.png)
 
-### Página de inicio - Programación diaria
-![Programación diaria inicio](img/readme/vista-descktop/presentacion-programacion-diaria.png)
-
 ### Página de inicio - Contenido (Galería)
 ![Galería](img/readme/vista-descktop/contenido-galeria-index.png)
-
-### Programación diaria - Contenido (Grilla de programas)
-![Programación diaria](img/readme/vista-descktop/contenido-grilla-programacion-diaria.png)
 
 ## Capturas de pantalla del proyecto - vista Mobile
 ### Página de inicio
 ![Presentación inicio](img/readme/vista-mobile/presentacion-index-mobile.png)
-
-### Página de inicio - Programación diaria
-![Programación diaria inicio](img/readme/vista-mobile/presentacion-programacion-diaria-mobile.png)
 
 ### Menú hamburguesa
 ![Menú hamburguesa](img/readme/vista-mobile/menu-hamburguesa-mobile.png)
@@ -159,5 +148,3 @@ La identidad visual del sitio se apoya en una base oscura, texto claro y acentos
 ### Página de inicio - Contenido (Galería)
 ![Galería](img/readme/vista-mobile/contenido-galeria-index-mobile.png)
 
-### Programación diaria - Contenido (Grilla de programas)
-![Programación diaria](img/readme/vista-mobile/contenido-grilla-programacion-diaria-mobile.png)
