@@ -27,6 +27,26 @@ body {
   padding-bottom: 54px;
 }
 
+.pagina-index {
+  --font-principal: "Archivo", sans-serif;
+  font-weight: 500;
+}
+
+.pagina-index .texto-negrita,
+.pagina-index .boton-programacion-diaria,
+.pagina-index .boton-flotante-vivo,
+.pagina-index .texto-iformacion-programa,
+.pagina-index .mensaje-ondemand-contenido span,
+.pagina-index .contenedor-vivo-escritorio .boton-vivo-escritorio,
+.pagina-index strong,
+.pagina-index b {
+  font-weight: 700;
+}
+
+.pagina-index .mensaje-ondemand-contenido span {
+  font-family: var(--font-principal);
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -44,9 +64,10 @@ html {
 }
 
 .estilo-botones {
-  background-color: var(--bg-color-icons);
+  background-color: var(--custom-background);
   color: white;
 }
+
 
 .block {
   display: block;
@@ -144,10 +165,6 @@ header {
   height: 55px;
   border-radius: 50%;
   font-size: 28px;
-}
-
-.redes-sociales .whatsapp-logo {
-  background-color: #25d366;
 }
 
 .tienda img {

@@ -46,23 +46,22 @@
 
     <!-- ✅ Preload de recursos críticos -->
     <link rel="preload"
-        href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Roboto:wght@400;700;900&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700&family=Archivo+Black&display=swap"
         as="style">
 
     <!-- ✅ Fuentes de Google (carga asíncrona para rendimiento) -->
-    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Roboto:wght@400;700;900&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700&family=Archivo+Black&display=swap"
         rel="stylesheet" media="print" onload="this.media='all'">
     <noscript>
-        <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Roboto:wght@400;700;900&display=swap"
+        <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700&family=Archivo+Black&display=swap"
             rel="stylesheet">
     </noscript>
 
     <!-- ✅ Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
         media="print" onload="this.media='all'">
     <noscript>
-        <link rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     </noscript>
 
     <!-- ✅ Hoja de estilos y script -->
@@ -71,7 +70,7 @@
     <script src="script.js" defer></script>
 </head>
 
-<body>
+<body class="pagina-index">
     <header class="flex bg-color-secundario width-full">
         <h1 class="logo flex align-items">
             <a href="index.html" class="align-items">
@@ -81,7 +80,7 @@
 
         <nav class="barra-navegacion" aria-label="Barra de redes sociales">
             <button class="menu-hamburguesa block" aria-label="Menú hamburguesa">
-                <i class="fa fa-bars" aria-hidden="true"></i>
+                <i class="fa-solid fa-bars" aria-hidden="true"></i>
             </button>
             <ul
                 class="contenido-menu bg-color-secundario align-items list-style flex-direction-column width-full overflow-hidden position-absolute">
@@ -90,16 +89,18 @@
                         <li>
                             <a href="https://open.spotify.com/user/g3v5ig2ziph2z2oyo6facnx1j"
                                 class="botones-redes estilo-botones justify-content flex align-items text-decoration-none btn-con-icono"
-                                aria-label="Spotify" target="_blank" rel="noopener noreferrer">
-                                <i class="fa fa-spotify"></i>
+                                aria-label="Spotify" target="_blank" rel="noopener noreferrer"
+                                style="--custom-background: #38D1C4;">
+                                <i class="fa-brands fa-spotify"></i>
                             </a>
                         </li>
 
                         <li>
                             <a href="https://www.instagram.com/luzutv/"
                                 class="botones-redes estilo-botones justify-content flex align-items text-decoration-none btn-con-icono"
-                                aria-label="Instagram" target="_blank" rel="noopener noreferrer">
-                                <i class="fa fa-instagram"></i>
+                                aria-label="Instagram" target="_blank" rel="noopener noreferrer"
+                                style="--custom-background: #F7C317;">
+                                <i class="fa-brands fa-instagram"></i>
                             </a>
 
                         </li>
@@ -107,32 +108,46 @@
                         <li>
                             <a href="https://www.facebook.com/luzutv/"
                                 class="botones-redes estilo-botones justify-content flex align-items text-decoration-none btn-con-icono"
-                                aria-label="Facebook" target="_blank" rel="noopener noreferrer">
-                                <i class="fa fa-facebook"></i>
+                                aria-label="Facebook" target="_blank" rel="noopener noreferrer"
+                                style="--custom-background: #F9D7F2;">
+                                <i class="fa-brands fa-facebook"></i>
                             </a>
                         </li>
 
                         <li>
                             <a href="https://www.twitch.tv/luzu_tv"
                                 class="botones-redes estilo-botones justify-content flex align-items text-decoration-none btn-con-icono"
-                                aria-label="Twitch" target="_blank" rel="noopener noreferrer">
-                                <i class="fa fa-twitch"></i>
+                                aria-label="Twitch" target="_blank" rel="noopener noreferrer"
+                                style="--custom-background: #EA173E;">
+
+                                <i class="fa-brands fa-twitch"></i>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="https://www.tiktok.com/@luzutv"
+                                class="botones-redes estilo-botones justify-content flex align-items text-decoration-none btn-con-icono"
+                                aria-label="TikTok" target="_blank" rel="noopener noreferrer"
+                                style="--custom-background: #38D1C4;">
+                                <i class="fa-brands fa-tiktok"></i>
                             </a>
                         </li>
 
                         <li>
                             <a href="https://x.com/luzucomunidad"
                                 class="botones-redes estilo-botones justify-content flex align-items text-decoration-none btn-con-icono"
-                                aria-label="Twitter" target="_blank" rel="noopener noreferrer">
-                                <i class="fa fa-twitter"></i>
+                                aria-label="X" target="_blank" rel="noopener noreferrer"
+                                style="--custom-background: #F7C317;">
+                                <i class="fa-brands fa-x-twitter"></i>
                             </a>
                         </li>
 
                         <li>
-                            <a href="https://wa.me/541166775566"
+                            <a href="https://web.whatsapp.com/"
                                 class="botones-redes flex whatsapp-logo justify-content estilo-botones align-items text-decoration-none btn-con-icono"
-                                aria-label="WhatsApp" target="_blank" rel="noopener noreferrer">
-                                <i class="fa fa-whatsapp"></i>
+                                aria-label="WhatsApp" target="_blank" rel="noopener noreferrer"
+                                style="--custom-background: #25d366;">
+                                <i class="fa-brands fa-whatsapp"></i>
                             </a>
                         </li>
                     </ul>
@@ -141,7 +156,8 @@
                 <li class="contenedor-vivo-escritorio">
                     <a href="https://www.youtube.com/channel/UCTHaNTsP7hsVgBxARZTuajw/live" target="_blank"
                         rel="noopener noreferrer"
-                        class="estilo-botones flex text-decoration-none boton-estandar btn-con-icono justify-content align-items ">
+                        class="estilo-botones flex text-decoration-none boton-estandar btn-con-icono justify-content align-items"
+                        style="--custom-background: #ff8a80;">
                         <span class="fa fa-circle"></span>
                         <span class="boton-vivo-escritorio">VIVO</span>
                     </a>
@@ -154,14 +170,14 @@
                 </li>
                 <li class="boton-programacion-diaria justify-content flex align-items">
                     <a href="programacion-diaria.html"
-                        class="estilo-botones block text-align text-decoration-none boton-estandar btn-con-icono">PROGRAMACIÓN
-                        DIARIA</a>
+                        class="estilo-botones block text-align text-decoration-none boton-estandar btn-con-icono"
+                        style="--custom-background: #ff8a80;">PROGRAMACIÓN DIARIA</a>
                 </li>
             </ul>
         </nav>
         <a href="https://www.youtube.com/watch?v=7hXe5dUGipk" target="_blank" rel="noopener noreferrer"
             class="boton-flotante-vivo text-decoration-none flex align-items justify-content">
-            <span class="fa fa-circle"></span>
+            <span class="fa-solid fa-circle"></span>
             <span>VIVO</span>
         </a>
     </header>
@@ -265,18 +281,37 @@
             </picture>
 
             <div class="imagenes-galeria flex align-items flex-direction-column">
+                <!-- luzu activa -->
+                <div class="programa overflow-hidden block">
+                    <a href="https://www.instagram.com/luzuteactiva/" target="_blank" rel="noopener noreferrer"
+                        class="block width-full">
+                        <img class="img-programa block object-fit-cover"
+                            src="img/programas/programas/luzu-activa/fondo-luzu-activa.webp" alt="Luzu activa"
+                            fetchpriority="high">
+                        <div class="imagen-superpuesta width-full position-absolute">
+                            <p class="texto-iformacion-programa block texto-negrita color-primario position-absolute">
+                                Lunes a Viernes<br>6.50 a 7.00</p>
+                            <img class="imagen-elenco height-auto position-absolute width-custom right-costum"
+                                style="--custom-width: 40%; --custom-right: -15px;"
+                                src="img/programas/programas/luzu-activa/elenco-luzu-activa.webp"
+                                alt="Elenco de Luzu activa">
+                        </div>
+                    </a>
+                </div>
+
                 <!-- fm -->
                 <div class="programa overflow-hidden block">
                     <a href="https://www.instagram.com/fmluzu_/" target="_blank" rel="noopener noreferrer"
                         class="block width-full">
-                        <img class="img-programa block object-fit-cover" src="img/presentaciones-programas/fm.webp"
-                            alt="Fm" fetchpriority="high">
+                        <img class="img-programa block object-fit-cover"
+                            src="img/programas/programas/fm/fm-amanecer/fondo-fm-almacenar.webp" alt="Fm"
+                            fetchpriority="high">
                         <div class="imagen-superpuesta width-full position-absolute">
                             <p class="texto-iformacion-programa block texto-negrita color-primario position-absolute">
-                                Lunes a Viernes:<br>07HS a 08HS</p>
+                                Lunes a Viernes<br>7.00 a 8.00</p>
                             <img class="imagen-elenco height-auto position-absolute width-custom right-costum"
                                 style="--custom-width: 48%; --custom-right: -15px;"
-                                src="img/elenco-programas/elenco-fm.webp" alt="Elenco del programa">
+                                src="img/programas/programas/fm/fm-amanecer/elenco-fm-amanecer.webp" alt="Elenco de Fm">
                         </div>
                     </a>
                 </div>
@@ -286,13 +321,15 @@
                     <a href="https://www.instagram.com/antesquenadie__/?hl=es" target="_blank" rel="noopener noreferrer"
                         class="block width-full">
                         <img class="img-programa block object-fit-cover"
-                            src="img/presentaciones-programas/antes-que-nadie.webp" alt="Antes que nadie">
+                            src="img/programas/programas/antes-que-nadie/fondo-antes-que-nadie.webp"
+                            alt="Antes que nadie">
                         <div class="imagen-superpuesta width-full position-absolute">
                             <p class="texto-iformacion-programa block texto-negrita color-primario position-absolute">
-                                Lunes a Viernes:<br>08HS a 10HS</p>
+                                Lunes a Viernes<br>8.00 a 10.00</p>
                             <img class="imagen-elenco height-auto position-absolute width-custom"
-                                style="--custom-width: 48%;" src="img/elenco-programas/elenco-antes-que-nadie.webp"
-                                alt="Elenco del programa">
+                                style="--custom-width: 48%;"
+                                src="img/programas/programas/antes-que-nadie/elenco-antes-que-nadie.webp"
+                                alt="Elenco de Antes que nadie">
                         </div>
                     </a>
                 </div>
@@ -302,15 +339,33 @@
                     <a href="https://www.instagram.com/nadiedicenada/?hl=es" target="_blank" rel="noopener noreferrer"
                         class="block width-full">
                         <img class="img-programa block object-fit-cover"
-                            src="img/presentaciones-programas/nadie-dice-nada.webp" alt="Nadie dice nada"
-                            loading="lazy">
+                            src="img/programas/programas/nadie-dice-nadie/fondo-nadie-dice-nada.webp"
+                            alt="Nadie dice nada" loading="lazy">
                         <div class="imagen-superpuesta width-full position-absolute">
                             <p class="texto-iformacion-programa block color-primario position-absolute">
-                                Lunes a Viernes:<br>10HS a 12:30HS</p>
+                                Lunes a Viernes<br>10.00 a 12.30</p>
+                            <img class="imagen-elenco height-auto position-absolute width-custom imagen-elenco-mask right-custom"
+                                style="--custom-width: 40%; --custom-right: -7px;"
+                                src="img/programas/programas/nadie-dice-nadie/elenco-nadie-dice-nada.webp"
+                                alt="Elenco de Nadie dice nada" loading="lazy">
+                        </div>
+                    </a>
+                </div>
+
+                <!-- el show del verano -->
+                <div class="programa overflow-hidden block">
+                    <a href="https://www.instagram.com/elshowdelverano/?hl=es-la" target="_blank"
+                        rel="noopener noreferrer" class="block width-full">
+                        <img class="img-programa block object-fit-cover"
+                            src="img/programas/programas/el-show-del-verano/fondo-el-show-del-verano.webp"
+                            alt="El show del verano" loading="lazy">
+                        <div class="imagen-superpuesta width-full position-absolute">
+                            <p class="texto-iformacion-programa block color-primario position-absolute">
+                                Lunes a Viernes<br>12.30 a 13.30</p>
                             <img class="imagen-elenco height-auto position-absolute width-custom right-custom"
                                 style="--custom-width: 45%; --custom-right: -7px;"
-                                src="img/elenco-programas/elenco-nadie-dice-nada.webp" alt="Elenco del programa"
-                                loading="lazy">
+                                src="img/programas/programas/el-show-del-verano/elenco-show-del-verano.webp"
+                                alt="Elenco de El show del verano" loading="lazy">
                         </div>
                     </a>
                 </div>
@@ -320,15 +375,15 @@
                     <a href="https://www.instagram.com/patriayfamilia_/" target="_blank" rel="noopener noreferrer"
                         class="block width-full">
                         <img class="img-programa block object-fit-cover"
-                            src="img/presentaciones-programas/patria-y-familia.webp" alt="Patria y familia"
-                            loading="lazy">
+                            src="img/programas/programas/patria-y-familia/fondo-patria-y-familia.webp"
+                            alt="Patria y familia" loading="lazy">
                         <div class="imagen-superpuesta width-full position-absolute">
                             <p class="texto-iformacion-programa block color-primario position-absolute">
-                                Lunes a Viernes:<br>12:30HS a 14:30HS</p>
+                                Lunes a Viernes<br>13.30 a 15.30</p>
                             <img class="imagen-elenco height-auto position-absolute width-custom right-custom"
                                 style="--custom-width: 45%; --custom-right: -5px;"
-                                src="img/elenco-programas/elenco-patria-y-familia.webp" alt="Elenco del programa"
-                                loading="lazy">
+                                src="img/programas/programas/patria-y-familia/elenco-patria-y-familia.webp"
+                                alt="Elenco del programa" loading="lazy">
                         </div>
                     </a>
                 </div>
@@ -338,14 +393,33 @@
                     <a href="https://www.instagram.com/sefuelarga/?hl=es" target="_blank" rel="noopener noreferrer"
                         class="block width-full">
                         <img class="img-programa block object-fit-cover"
-                            src="img/presentaciones-programas/se-fue-larga.webp" alt="Se fue larga" loading="lazy">
+                            src="img/programas/programas/se-fue-larga/fondo-se-fue-larga.webp" alt="Se fue larga"
+                            loading="lazy">
                         <div class="imagen-superpuesta width-full position-absolute">
                             <p class="texto-iformacion-programa block color-primario position-absolute">
-                                Lunes a Viernes:<br>14:30HS a 16:30HS</p>
+                                Lunes a Viernes<br>15.30 a 17.30</p>
                             <img class="imagen-elenco height-auto position-absolute width-custom right-custom"
                                 style="--custom-width: 45%; --custom-right: -10px;"
-                                src="img/elenco-programas/elenco-se-fue-larga.webp" alt="Elenco del programa"
-                                loading="lazy">
+                                src="img/programas/programas/se-fue-larga/elenco-se-fue-larga.webp"
+                                alt="Elenco del programa" loading="lazy">
+                        </div>
+                    </a>
+                </div>
+
+                <!-- fm al atardecer -->
+                <div class="programa overflow-hidden block">
+                    <a href="https://www.instagram.com/fmluzu_/" target="_blank" rel="noopener noreferrer"
+                        class="block width-full">
+                        <img class="img-programa block object-fit-cover"
+                            src="img/programas/programas/fm/fm-atardecer/fondo-fm-atardecer.webp" alt="Fm al atardecer"
+                            loading="lazy">
+                        <div class="imagen-superpuesta width-full position-absolute">
+                            <p class="texto-iformacion-programa block color-primario position-absolute">
+                                Lunes a Viernes<br>17.30 a 18.30</p>
+                            <img class="imagen-elenco height-auto position-absolute width-custom right-custom"
+                                style="--custom-width: 45%; --custom-right: -1px;"
+                                src="img/programas/programas/fm/fm-atardecer/elenco-fm-atardecer.webp"
+                                alt="Elenco de Fm al atardecer" loading="lazy">
                         </div>
                     </a>
                 </div>
@@ -355,31 +429,83 @@
                     <a href="https://www.instagram.com/lanovela__?igsh=MXBoMTEwZ2xjNTA4MQ%3D%3D" target="_blank"
                         rel="noopener noreferrer" class="block width-full">
                         <img class="img-programa block object-fit-cover"
-                            src="img/presentaciones-programas/la-novela.webp" alt="la novela" loading="lazy">
+                            src="img/programas/programas/la-novela/fondo-la-novela.webp" alt="la novela" loading="lazy">
                         <div class="imagen-superpuesta width-full position-absolute">
                             <p class="texto-iformacion-programa block color-primario position-absolute">
-                                Lun - Mier - Vier<br>16:30HS a 18:30HS</p>
+                                lunes y miercoles<br>18.30 a 20.00</p>
                             <img class="imagen-elenco height-auto position-absolute imagen-elenco-mask width-custom"
-                                style="--custom-width: 40%;" src="img/elenco-programas/elenco-la-novela.webp"
-                                alt="Elenco del programa">
+                                style="--custom-width: 40%;"
+                                src="img/programas/programas/la-novela/elenco-la-novela.webp" alt="Elenco del programa">
                         </div>
                     </a>
                 </div>
 
-                <!-- algo va a picar -->
+                <!-- los del fondo -->
                 <div class="programa overflow-hidden block">
-                    <a href="https://www.instagram.com/algovaapicar?igsh=MWx0ZmxwNDgxaGljMQ%3D%3D" target="_blank"
-                        rel="noopener noreferrer" class="block width-full">
+                    <a href="https://www.instagram.com/losdelfondoluzu/" target="_blank" rel="noopener noreferrer"
+                        class="block width-full">
                         <img class="img-programa block object-fit-cover"
-                            src="img/presentaciones-programas/algo-va-a-picar.webp" alt="Algo va a picar"
+                            src="img/programas/programas/los-del-fondo/fondo-los-del-fondo.webp" alt="Los del fondo"
                             loading="lazy">
                         <div class="imagen-superpuesta width-full position-absolute">
                             <p class="texto-iformacion-programa block color-primario position-absolute">
-                                Martes - Jueves <br>16:30HS a 18:30HS</p>
+                                martes<br>18.30 a 20.00</p>
                             <img class="imagen-elenco height-auto position-absolute width-custom right-custom"
-                                style="--custom-width: 50%; --custom-right: -15px;"
-                                src="img/elenco-programas/elenco-algo-va-a-picar.webp" alt="Elenco del programa"
-                                loading="lazy">
+                                style="--custom-width: 50%; --custom-right: -1px;"
+                                src="img/programas/programas/los-del-fondo/elenco-los-del-fondo.webp"
+                                alt="Elenco del programa" loading="lazy">
+                        </div>
+                    </a>
+                </div>
+
+                <!-- los no talentos -->
+                <div class="programa overflow-hidden block">
+                    <a href="https://www.instagram.com/losnotalentos/?hl=es-la" target="_blank"
+                        rel="noopener noreferrer" class="block width-full">
+                        <img class="img-programa block object-fit-cover"
+                            src="img/programas/programas/los-no-talento/fondo-los-no-talentos.webp"
+                            alt="Los no talentos" loading="lazy">
+                        <div class="imagen-superpuesta width-full position-absolute">
+                            <p class="texto-iformacion-programa block color-primario position-absolute">
+                                jueves<br>18.30 a 19.30</p>
+                            <img class="imagen-elenco height-auto position-absolute width-custom right-custom"
+                                style="--custom-width: 60%; --custom-right: -1px;"
+                                src="img/programas/programas/los-no-talento/elenco-los-no-talentos.webp"
+                                alt="Elenco de Los no talentos" loading="lazy">
+                        </div>
+                    </a>
+                </div>
+
+                <!-- un sabado mejor -->
+                <div class="programa overflow-hidden block">
+                    <a href="https://www.instagram.com/unsabadomejor/" target="_blank" rel="noopener noreferrer"
+                        class="block width-full">
+                        <img class="img-programa block object-fit-cover"
+                            src="img/programas/programas/un-sabado-mejor/fondo-un-sabado-mejor.webp"
+                            alt="Un sabado mejor" loading="lazy">
+                        <div class="imagen-superpuesta width-full position-absolute">
+                            <p class="texto-iformacion-programa block color-primario position-absolute">
+                                sabado<br>9.00 a 11.00</p>
+                            <img class="imagen-elenco height-auto position-absolute width-custom right-custom"
+                                style="--custom-width: 60%; --custom-right: -15px;"
+                                src="img/programas/programas/un-sabado-mejor/elenco-un-sabado-mejor.webp"
+                                alt="Elenco de Un sabado mejor" loading="lazy">
+                        </div>
+                    </a>
+                </div>
+
+                <!-- plp -->
+                <div class="programa overflow-hidden block">
+                    <a href="https://www.instagram.com/plpok_/" target="_blank" rel="noopener noreferrer"
+                        class="block width-full">
+                        <img class="img-programa block object-fit-cover"
+                            src="img/programas/programas/plp/fondo-plp.webp" alt="PLP" loading="lazy">
+                        <div class="imagen-superpuesta width-full position-absolute">
+                            <p class="texto-iformacion-programa block color-primario position-absolute">
+                                sabado<br>11.00 a 13.00</p>
+                            <img class="imagen-elenco height-auto position-absolute width-custom right-custom imagen-elenco-mask"
+                                style="--custom-width: 45%; --custom-right: -1px;"
+                                src="img/programas/programas/plp/elenco-pdp.webp" alt="Elenco de PLP" loading="lazy">
                         </div>
                     </a>
                 </div>
@@ -389,15 +515,16 @@
                     <a href="https://www.instagram.com/algodemusica__/?hl=es" target="_blank" rel="noopener noreferrer"
                         class="block width-full">
                         <img class="img-programa block object-fit-cover"
-                            src="img/presentaciones-programas/algo-de-musica.webp" alt="Algo de musica" loading="lazy">
+                            src="img/programas/programas/algo-de-musica/fondo-algo-de-musica.webp" alt="Algo de musica"
+                            loading="lazy">
                         <div class="imagen-superpuesta width-full position-absolute">
                             <p class="texto-iformacion-programa block color-primario position-absolute">
-                                <span class="cambios">ON DEMAND</span>
+                                <span class="cambios">on demand</span>
                             </p>
                             <img class="imagen-elenco height-auto position-absolute width-custom right-custom"
                                 style="--custom-width: 35%; --custom-right: -15px;"
-                                src="img/elenco-programas/elenco-algo-de-musica.webp" alt="Elenco del programa"
-                                loading="lazy">
+                                src="img/programas/programas/algo-de-musica/elenco-algo-de-musica.webp"
+                                alt="Elenco del programa" loading="lazy">
                         </div>
                     </a>
                 </div>
@@ -407,31 +534,53 @@
                     <a href="https://www.instagram.com/edicionespecial__/?hl=es" target="_blank"
                         rel="noopener noreferrer" class="block width-full">
                         <img class="img-programa block object-fit-cover"
-                            src="img/presentaciones-programas/edicion-especial.webp" alt="Edición especial"
-                            loading="lazy">
+                            src="img/programas/programas/edicion-especial/fondo-edicion-especial.webp"
+                            alt="Edición especial" loading="lazy">
                         <div class="imagen-superpuesta width-full position-absolute">
                             <p class="texto-iformacion-programa block color-primario position-absolute">
-                                <span class="cambios">PROXIMAMENTE</span>
+                                <span class="cambios">on demand</span>
                             </p>
-                            <img class="imagen-elenco height-auto position-absolute imagen-elenco-mask width-custom"
-                                style="--custom-width: 50%;" src="img/elenco-programas/elenco-edicion-especial.webp"
+                            <img class="imagen-elenco height-auto position-absolute width-custom"
+                                style="--custom-width: 50%;"
+                                src="img/programas/programas/edicion-especial/elenco-edicion-especial.webp"
                                 alt="Elenco del programa">
                         </div>
                     </a>
                 </div>
 
-                <!-- stream master -->
+                <!-- flasheando secuencia -->
                 <div class="programa overflow-hidden block">
-                    <a href="https://www.instagram.com/xtreammasterluzutv/?hl=es" target="_blank"
-                        rel="noopener noreferrer" class="block width-full">
+                    <a href="https://www.instagram.com/flashandosecuencia__/" target="_blank" rel="noopener noreferrer"
+                        class="block width-full">
                         <img class="img-programa block object-fit-cover"
-                            src="img/presentaciones-programas/stream-master.webp" alt="Stream master" loading="lazy">
+                            src="img/programas/programas/flasheando-secuencia/fondo-flasheando-secuencia.webp"
+                            alt="Flasheando secuencia" loading="lazy">
                         <div class="imagen-superpuesta width-full position-absolute">
-                            <p class="texto-iformacion-programa block color-primario position-absolute">ON
-                                DEMAND</p>
+                            <p class="texto-iformacion-programa block color-primario position-absolute">
+                                <span class="cambios">on demand</span>
+                            </p>
                             <img class="imagen-elenco height-auto position-absolute width-custom"
-                                style="--custom-width: 60%;" src="img/elenco-programas/elenco-stream-master.webp"
+                                style="--custom-width: 45%;"
+                                src="img/programas/programas/flasheando-secuencia/elenco-flasheando-secuencia.webp"
                                 alt="Elenco del programa" loading="lazy">
+                        </div>
+                    </a>
+                </div>
+
+                <!-- luzu kids -->
+                <div class="programa overflow-hidden block">
+                    <a href="https://www.instagram.com/luzutv/" target="_blank" rel="noopener noreferrer"
+                        class="block width-full">
+                        <img class="img-programa block object-fit-cover"
+                            src="img/programas/programas/luzu-kids/fondo-luzu-kids.webp" alt="Luzu kids" loading="lazy">
+                        <div class="imagen-superpuesta width-full position-absolute">
+                            <p class="texto-iformacion-programa block color-primario position-absolute">
+                                <span class="cambios">on demand</span>
+                            </p>
+                            <img class="imagen-elenco height-auto position-absolute width-custom right-custom"
+                                style="--custom-width: 50%; --custom-right: -15px;"
+                                src="img/programas/programas/luzu-kids/elenco-luzu-kids.webp" alt="Elenco de Luzu kids"
+                                loading="lazy">
                         </div>
                     </a>
                 </div>
@@ -469,35 +618,42 @@
                             <a href="https://open.spotify.com/user/g3v5ig2ziph2z2oyo6facnx1j" aria-label="Spotify"
                                 target="_blank" rel="noopener noreferrer"
                                 class="flex justify-content align-items text-decoration-none">
-                                <i class="fa fa-spotify"></i>
+                                <i class="fa-brands fa-spotify"></i>
                             </a>
                         </li>
 
                         <li class="footer-botones-redes">
                             <a href="https://www.instagram.com/luzutv/" aria-label="Instagram" target="_blank"
                                 rel="noopener noreferrer" class="flex justify-content align-items text-decoration-none">
-                                <i class="fa fa-instagram"></i>
+                                <i class="fa-brands fa-instagram"></i>
                             </a>
                         </li>
 
                         <li class="footer-botones-redes">
                             <a href="https://www.facebook.com/luzutv/" aria-label="Facebook" target="_blank"
                                 rel="noopener noreferrer" class="flex justify-content align-items text-decoration-none">
-                                <i class="fa fa-facebook"></i>
+                                <i class="fa-brands fa-facebook"></i>
                             </a>
                         </li>
 
                         <li class="footer-botones-redes">
                             <a href="https://www.twitch.tv/luzu_tv" aria-label="Twitch" target="_blank"
                                 rel="noopener noreferrer" class="flex justify-content align-items text-decoration-none">
-                                <i class="fa fa-twitch"></i>
+                                <i class="fa-brands fa-twitch"></i>
                             </a>
                         </li>
 
                         <li class="footer-botones-redes">
-                            <a href="https://x.com/luzucomunidad" aria-label="Twitter" target="_blank"
+                            <a href="https://www.tiktok.com/@luzutv" aria-label="TikTok" target="_blank"
                                 rel="noopener noreferrer" class="flex justify-content align-items text-decoration-none">
-                                <i class="fa fa-twitter"></i>
+                                <i class="fa-brands fa-tiktok"></i>
+                            </a>
+                        </li>
+
+                        <li class="footer-botones-redes">
+                            <a href="https://x.com/luzucomunidad" aria-label="X" target="_blank"
+                                rel="noopener noreferrer" class="flex justify-content align-items text-decoration-none">
+                                <i class="fa-brands fa-x-twitter"></i>
                             </a>
                         </li>
 
@@ -505,7 +661,7 @@
                             <a href="https://www.youtube.com/live/snxOEybSRng?si=wa_9qcMFUc9tfoo_" aria-label="YouTube"
                                 target="_blank" rel="noopener noreferrer"
                                 class="flex justify-content align-items text-decoration-none">
-                                <i class="fa fa-youtube-play"></i>
+                                <i class="fa-brands fa-youtube"></i>
                             </a>
                         </li>
                     </ul>
