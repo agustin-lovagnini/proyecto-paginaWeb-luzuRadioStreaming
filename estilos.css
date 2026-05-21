@@ -16,8 +16,13 @@
 
 a,
 .menu-hamburguesa {
-  outline: none;
   -webkit-tap-highlight-color: transparent;
+}
+
+a:focus-visible,
+.menu-hamburguesa:focus-visible {
+  outline: 3px solid var(--bg-color-icons);
+  outline-offset: 4px;
 }
 
 body {
@@ -31,7 +36,6 @@ body {
 
 .pagina-index .texto-negrita,
 .pagina-index .boton-flotante-vivo,
-.pagina-index .texto-iformacion-programa,
 .pagina-index .mensaje-ondemand-contenido span,
 .pagina-index .contenedor-vivo-escritorio .boton-vivo-escritorio,
 .pagina-index strong,
@@ -332,9 +336,6 @@ main {
   max-width: 900px;
   border-radius: 35px;
   border: 5px solid var(--bg-color-icons);
-}
-
-.seccion-streaming-en-vivo iframe {
   width: 100%;
   height: auto;
   background-color: #000;
@@ -690,7 +691,7 @@ footer {
   }
 
   .contenedor-vivo-escritorio {
-    display: block;
+    display: flex;
     justify-content: center;
     align-items: center;
     order: -1;
@@ -713,7 +714,7 @@ footer {
   .btn-con-icono,
   .btn-con-icono i,
   .tienda {
-    transition: all 0.3s ease;
+    transition: transform 0.3s ease, text-shadow 0.3s ease, color 0.3s ease;
   }
 
   .btn-con-icono {
@@ -889,7 +890,7 @@ footer {
     width: 40px;
     height: 40px;
     font-size: 19px;
-    transition: all 0.3s ease;
+    transition: color 0.3s ease, transform 0.3s ease;
   }
 
   .footer-redes-sociales a:hover {
