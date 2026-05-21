@@ -777,7 +777,7 @@ footer {
   }
 
   .programacion-resumen {
-    padding: 18px 28px 20px;
+    padding: 28px 28px;
     overflow: hidden;
   }
 
@@ -794,6 +794,7 @@ footer {
   .programacion-item {
     grid-template-rows: auto auto auto;
     row-gap: 1px;
+    align-self: end;
   }
 
   .programacion-item img {
@@ -861,25 +862,34 @@ footer {
 
   /**---  SECTION FOOTER  ---*/
   footer {
-    padding: 30px 20px 28px;
+    padding: 18px 0 58px;
   }
 
   .footer-contenedor {
-    flex-direction: column;
-    justify-content: center;
-    margin: 0 auto;
-    padding: 0;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 8px 0 6px;
+    padding: 0 70px;
+    max-width: none;
   }
 
   .footer-redes-sociales {
-    display: grid;
-    gap: 18px 24px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 20px;
+    margin: 10px 0;
+  }
+
+  .footer-botones-redes:last-child {
+    grid-column: auto;
   }
 
   .footer-redes-sociales a {
-    width: 62px;
-    height: 62px;
-    font-size: 27px;
+    width: 40px;
+    height: 40px;
+    font-size: 19px;
+    transition: all 0.3s ease;
   }
 
   .footer-redes-sociales a:hover {
@@ -888,6 +898,11 @@ footer {
   }
 
   .logo-footer {
-    width: 150px;
+    width: 130px;
+  }
+
+  .texto-copyright {
+    margin-top: 18px;
+    max-width: none;
   }
 }
