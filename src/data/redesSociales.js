@@ -33,7 +33,7 @@ const redesSociales = [
     nombre: 'X',
     url: 'https://x.com/luzucomunidad',
     color: '#F7C317',
-    icono: 'fa-brands fa-x',
+    icono: 'fa-brands fa-x-twitter',
   },
   {
     nombre: 'WhatsApp',

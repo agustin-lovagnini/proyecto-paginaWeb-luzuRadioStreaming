@@ -1,0 +1,26 @@
+.boton-vivo-flotante {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    z-index: 3000;
+    width: 85px;
+    height: 50px;
+    background-color: #e10000;
+    color: #ffffff;
+    border: 3px solid var(--bg-color-primario);
+    border-radius: 50px;
+    box-shadow: 3px 4px 7px rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+@media (min-width: 1025px) {
+    .boton-vivo-flotante {
+        display: none;
+    }
+}
