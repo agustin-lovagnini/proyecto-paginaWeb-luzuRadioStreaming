@@ -1,10 +1,15 @@
+import Header from '../../components/Header'
 import './Home.css'
 
 function Home() {
   return (
-    <main className="home-page">
-      <h1>Bienvenidos lolo</h1>
-    </main>
+    <>
+      <Header />
+
+      <main className="pagina-inicio">
+        <h1>Bienvenidos</h1>
+      </main>
+    </>
   )
 }
 

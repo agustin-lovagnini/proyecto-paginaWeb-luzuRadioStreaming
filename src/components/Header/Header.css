@@ -1,0 +1,94 @@
+.encabezado-sitio {
+  width: 100%;
+  height: 70px;
+  background-color: var(--bg-color-secundario);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 26px;
+  border-bottom: 2px solid var(--bg-color-icons-footer);
+  position: sticky;
+  top: 0;
+  z-index: 6000;
+}
+
+.encabezado-sitio__logo {
+  display: block;
+  line-height: 0;
+}
+
+.encabezado-sitio__logo img {
+  width: 120px;
+  height: 23px;
+  object-fit: cover;
+}
+
+.encabezado-sitio__boton-menu {
+  border: 0;
+  background: none;
+  color: var(--bg-color-icons);
+  cursor: pointer;
+  font-size: 30px;
+  line-height: 1;
+}
+
+.encabezado-sitio__menu {
+  width: 100%;
+  background-color: var(--bg-color-secundario);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  padding: 20px 26px;
+  border-bottom: 2px solid var(--bg-color-icons-footer);
+}
+
+.encabezado-sitio__redes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  list-style: none;
+}
+
+.encabezado-sitio__redes a {
+  width: 55px;
+  height: 55px;
+  background-color: var(--color-red-social);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 28px;
+}
+
+.encabezado-sitio__boton-vivo {
+  align-self: center;
+  background-color: #ff8a80;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  border-radius: 9px;
+  padding: 15px;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.encabezado-sitio__tienda {
+  align-self: center;
+  display: block;
+  line-height: 0;
+}
+
+.encabezado-sitio__tienda img {
+  width: 200px;
+  height: 55px;
+  object-fit: cover;
+}
