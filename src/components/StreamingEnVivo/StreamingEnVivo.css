@@ -1,0 +1,41 @@
+.seccion-streaming-en-vivo {
+    width: 100%;
+    min-height: 330px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.seccion-streaming-en-vivo__fondo {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+}
+
+.seccion-streaming-en-vivo__fondo img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.seccion-streaming-en-vivo__video {
+    width: min(90%, 720px);
+    aspect-ratio: 16 / 9;
+    margin: 20px;
+    position: relative;
+    z-index: 1;
+    border: 5px solid var(--bg-color-icons);
+    border-radius: 28px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.35);
+}
+
+.seccion-streaming-en-vivo__video iframe {
+    width: 100%;
+    height: 100%;
+    display: block;
+    border: 0;
+}

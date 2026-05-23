@@ -1,0 +1,44 @@
+.marquesina-ondemand {
+    width: 100%;
+    height: 30px;
+    background-color: var(--bg-color-secundario);
+    border-block: 2px solid var(--bg-color-icons);
+    overflow: hidden;
+    user-select: none;
+}
+
+.marquesina-ondemand__contenido {
+    height: 100%;
+    width: max-content;
+    display: flex;
+    align-items: center;
+    animation: marquesina-ondemand 70s linear infinite;
+    will-change: transform;
+}
+
+.marquesina-ondemand__grupo {
+    color: var(--bg-color-primario);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding-right: 8px;
+    font: 900 0.8rem Arial, Helvetica, sans-serif;
+    letter-spacing: 1px;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.marquesina-ondemand__grupo span::before {
+    content: "\2022";
+    margin-right: 8px;
+}
+
+@keyframes marquesina-ondemand {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}

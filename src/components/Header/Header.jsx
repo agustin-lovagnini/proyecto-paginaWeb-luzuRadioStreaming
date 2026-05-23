@@ -6,6 +6,10 @@ import './Header.css'
 function Header() {
     const [menuAbierto, cambiarMenuAbierto] = useState(false)
 
+    const redesHeader = redesSociales.filter((redSocial) =>
+        redSocial.mostrarEn.includes('header')
+    )
+
     return (
         <header className="encabezado-sitio">
             <a href="/" className="encabezado-sitio__logo">
@@ -30,7 +34,7 @@ function Header() {
                 aria-label="Redes sociales"
             >
                 <ul className="encabezado-sitio__redes">
-                    {redesSociales.map((redSocial) => (
+                    {redesHeader.map((redSocial) => (
                         <li key={redSocial.nombre}>
                             <a
                                 href={redSocial.url}
