@@ -76,17 +76,25 @@ npm run build
 
 ## GitHub Pages
 
-El proyecto esta preparado para publicarse en GitHub Pages con GitHub Actions.
+El proyecto esta preparado para publicarse en GitHub Pages con el paquete `gh-pages`.
 
-### Pasos
+### Configuracion en GitHub
 
 1. Subir el proyecto a GitHub.
 2. Ir al repositorio en GitHub.
 3. Entrar a `Settings > Pages`.
-4. En `Build and deployment`, elegir `Source: GitHub Actions`.
-5. Hacer push a la rama `main`.
+4. En `Build and deployment`, elegir `Source: Deploy from a branch`.
+5. Elegir la rama `gh-pages` y la carpeta `/ (root)`.
 
-El workflow ubicado en `.github/workflows/deploy.yml` instala dependencias, ejecuta el build y publica la carpeta `dist`.
+### Publicar cambios
+
+Cada vez que quieras publicar una nueva version:
+
+```bash
+npm run deploy
+```
+
+Ese comando ejecuta `npm run build` y sube el contenido de `dist/` a la rama `gh-pages`.
 
 La URL final deberia tener esta forma:
 
