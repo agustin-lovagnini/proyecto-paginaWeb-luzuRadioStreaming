@@ -11,19 +11,19 @@ function SeccionResumido() {
                 <div className="seccion-resumido__decoracion">
                     <img
                         className="seccion-resumido__r"
-                        src="/img/logos/R-resumido.webp"
+                        src="img/logos/R-resumido.webp"
                         alt=""
                         aria-hidden="true"
                     />
                     <img
                         className="seccion-resumido__flechas seccion-resumido__flechas--volteadas"
-                        src="/img/ilustraciones/flechas-negras.webp"
+                        src="img/ilustraciones/flechas-negras.webp"
                         alt=""
                         aria-hidden="true"
                     />
                     <img
                         className="seccion-resumido__flechas seccion-resumido__flechas--volteadas seccion-resumido__flechas--blancas"
-                        src="/img/ilustraciones/flechas-blancas.webp"
+                        src="img/ilustraciones/flechas-blancas.webp"
                         alt=""
                         aria-hidden="true"
                     />
@@ -42,19 +42,19 @@ function SeccionResumido() {
                 <div className="seccion-resumido__decoracion">
                     <img
                         className="seccion-resumido__flechas seccion-resumido__flechas--blancas"
-                        src="/img/ilustraciones/flechas-blancas.webp"
+                        src="img/ilustraciones/flechas-blancas.webp"
                         alt=""
                         aria-hidden="true"
                     />
                     <img
                         className="seccion-resumido__flechas"
-                        src="/img/ilustraciones/flechas-negras.webp"
+                        src="img/ilustraciones/flechas-negras.webp"
                         alt=""
                         aria-hidden="true"
                     />
                     <img
                         className="seccion-resumido__r"
-                        src="/img/logos/R-resumido.webp"
+                        src="img/logos/R-resumido.webp"
                         alt=""
                         aria-hidden="true"
                     />

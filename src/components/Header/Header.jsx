@@ -12,11 +12,10 @@ function Header() {
 
     return (
         <header className="encabezado-sitio">
-            <a href="/" className="encabezado-sitio__logo">
-                <img src="/img/logos/logo-header.webp" alt="Luzu TV" />
+            <a href="./" className="encabezado-sitio__logo">
+                <img src="img/logos/logo-header.webp" alt="Luzu TV" />
             </a>
 
-            {/* Botón para abrir/cerrar el menú en dispositivos móviles */}
             <button
                 type="button"
                 className="encabezado-sitio__boton-menu"
@@ -26,8 +25,6 @@ function Header() {
             >
                 {menuAbierto ? 'X' : '\u2630'}
             </button>
-
-            {/* Menú de navegación, visible solo en dispositivos móviles cuando el menú está abierto */}
 
             <nav
                 className={`encabezado-sitio__menu ${menuAbierto ? 'encabezado-sitio__menu--abierto' : ''}`}
@@ -48,6 +45,7 @@ function Header() {
                         </li>
                     ))}
                 </ul>
+
                 <a
                     href="https://www.youtube.com/channel/UCTHaNTsP7hsVgBxARZTuajw/live"
                     target="_blank"
@@ -57,6 +55,7 @@ function Header() {
                     <span className="fa fa-circle" aria-hidden="true"></span>
                     <span>VIVO</span>
                 </a>
+
                 <a
                     href="https://luzutv.shop/"
                     target="_blank"
@@ -64,21 +63,16 @@ function Header() {
                     className="encabezado-sitio__tienda"
                 >
                     <img
-                        src="/img/logos/diseño-tienda.webp"
+                        src="img/logos/diseno-tienda.webp"
                         alt="Tienda de Luzu TV"
                         loading="lazy"
                     />
                 </a>
             </nav>
+
             <BotonVivo />
-
-
-
-
-
         </header>
     )
-
 }
 
 export default Header

@@ -1,16 +1,101 @@
-# React + Vite
+# Luzu TV Streaming - Migracion a React
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Proyecto de practica hecho con React y Vite. Es una migracion paso a paso de una pagina estatica previa a una estructura basada en componentes.
 
-Currently, two official plugins are available:
+> Este proyecto esta creado exclusivamente como material de desarrollo y estudio. No es un sitio oficial, no tiene fines de lucro y no utiliza informacion para otros propositos.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Vista previa
 
-## React Compiler
+### Desktop
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+![Vista desktop](public/img/readme/vista-descktop/presentacion-index.png)
 
-## Expanding the ESLint configuration
+### Mobile
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+![Vista mobile](public/img/readme/vista-mobile/presentacion-index-mobile.png)
+
+## Tecnologias
+
+- React
+- Vite
+- CSS modular por componente
+- Font Awesome por CDN
+
+## Estructura del proyecto
+
+```txt
+public/
+  img/                 # Assets publicos usados por la app y README
+src/
+  components/          # Componentes reutilizables
+  data/                # Datos para redes, programacion y galeria
+  pages/               # Paginas de la app
+  App.jsx
+  main.jsx
+index.html
+vite.config.js
+```
+
+## Componentes principales
+
+- `Header`: logo, redes, tienda, menu mobile y boton de vivo.
+- `BotonVivo`: boton flotante de vivo para mobile/tablet.
+- `SeccionResumido`: bloque superior de Resumido.
+- `MarquesinaOndemand`: marquesina reutilizable de EN VIVO / ON DEMAND.
+- `StreamingEnVivo`: seccion con fondo responsivo e iframe de YouTube.
+- `ProgramacionResumen`: resumen de dias y horarios de programas.
+- `GaleriaProgramas`: tarjetas de programas generadas desde datos.
+- `Footer`: logo, redes y aviso de desarrollo.
+
+## Instalacion local
+
+```bash
+npm install
+```
+
+## Ejecutar en desarrollo
+
+```bash
+npm run dev
+```
+
+Luego abrir la URL que muestra Vite, normalmente:
+
+```txt
+http://localhost:5173/
+```
+
+## Validar el proyecto
+
+```bash
+npm run lint
+npm run build
+```
+
+`npm run build` genera la carpeta `dist/`, que es la version optimizada para publicar. Esa carpeta no se edita a mano y esta ignorada por Git.
+
+## GitHub Pages
+
+El proyecto esta preparado para publicarse en GitHub Pages con GitHub Actions.
+
+### Pasos
+
+1. Subir el proyecto a GitHub.
+2. Ir al repositorio en GitHub.
+3. Entrar a `Settings > Pages`.
+4. En `Build and deployment`, elegir `Source: GitHub Actions`.
+5. Hacer push a la rama `main`.
+
+El workflow ubicado en `.github/workflows/deploy.yml` instala dependencias, ejecuta el build y publica la carpeta `dist`.
+
+La URL final deberia tener esta forma:
+
+```txt
+https://TU_USUARIO.github.io/proyecto-paginaweb-luzu-radio-streaming/
+```
+
+## Notas de organizacion
+
+- Los assets se guardan en `public/img` para que Vite los copie correctamente al build.
+- Las rutas de imagenes usan `img/...` en vez de `/img/...` para funcionar bien en GitHub Pages.
+- Los archivos heredados del proyecto estatico anterior fueron removidos cuando dejaron de ser necesarios.

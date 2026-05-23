@@ -11,9 +11,9 @@ function Footer() {
             <footer className="pie-sitio">
                 <div className="pie-sitio__contenedor">
                     <div className="pie-sitio__logo">
-                        <a href="/">
+                        <a href="./">
                             <img
-                                src="/img/logos/logo-footer.webp"
+                                src="img/logos/logo-footer.webp"
                                 alt="Logo Luzu TV"
                                 loading="lazy"
                             />
@@ -39,7 +39,7 @@ function Footer() {
                 </div>
 
                 <p className="pie-sitio__copyright">
-                    © 2021 LuzuTv. Todos los derechos reservados.
+                    &copy; 2021 LuzuTv. Todos los derechos reservados.
                 </p>
             </footer>
 
