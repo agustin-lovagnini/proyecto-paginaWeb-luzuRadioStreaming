@@ -26,6 +26,7 @@
 .programacion-resumen__contenido {
     position: relative;
     z-index: 1;
+    box-sizing: border-box;
     height: 100%;
     overflow-x: auto;
     overflow-y: hidden;
@@ -41,6 +42,8 @@
     row-gap: 20px;
     height: 100%;
     min-width: max-content;
+    margin: 0;
+    padding: 0;
     list-style: none;
 }
 
@@ -76,6 +79,21 @@
     line-height: 1;
 }
 
+.programacion-resumen__dia,
+.programacion-resumen__horario,
+.programacion-resumen__on-demand {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    padding: 3px 7px;
+    border-radius: 4px;
+    background-color: rgba(0, 0, 0, 0.62);
+    box-shadow: 0 2px 7px rgba(0, 0, 0, 0.34);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.85);
+    white-space: nowrap;
+}
+
 .programacion-resumen__horario,
 .programacion-resumen__on-demand {
     font-family: var(--font-principal);
@@ -87,7 +105,7 @@
 @media (min-width: 1025px) {
     .programacion-resumen {
         display: block;
-        height: 250px;
+        height: 300px;
     }
 
     .programacion-resumen__contenido {
@@ -99,7 +117,7 @@
         grid-template-columns: repeat(18, minmax(0, 1fr));
         grid-template-rows: repeat(2, minmax(0, 1fr));
         column-gap: 0;
-        row-gap: 14px;
+        row-gap: 0px;
         width: min(100%, 1760px);
         height: 100%;
         margin-inline: auto;
@@ -107,7 +125,7 @@
     }
 
     .programacion-resumen__item {
-        row-gap: 1px;
+        row-gap: 5px;
         align-self: center;
     }
 
@@ -118,11 +136,11 @@
     }
 
     .programacion-resumen__dia {
-        font-size: clamp(14px, 0.9vw, 16px);
+        font-size: clamp(14px, 0.9vw, 15px);
     }
 
     .programacion-resumen__horario,
     .programacion-resumen__on-demand {
-        font-size: clamp(12px, 1.18vw, 23px);
+        font-size: clamp(12px, 1vw, 20px);
     }
 }
