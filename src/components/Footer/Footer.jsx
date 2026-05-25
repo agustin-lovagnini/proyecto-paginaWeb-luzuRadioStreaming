@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import redesSociales from '../../data/redesSociales'
 import './Footer.css'
 
@@ -11,13 +12,13 @@ function Footer() {
             <footer className="pie-sitio">
                 <div className="pie-sitio__contenedor">
                     <div className="pie-sitio__logo">
-                        <a href="./">
+                        <Link to="/">
                             <img
-                                src="img/logos/logo-footer.webp"
+                                src="/img/logos/logo-footer.webp"
                                 alt="Logo Luzu TV"
                                 loading="lazy"
                             />
-                        </a>
+                        </Link>
                     </div>
 
                     <nav className="pie-sitio__nav" aria-label="Redes sociales de Luzu TV">

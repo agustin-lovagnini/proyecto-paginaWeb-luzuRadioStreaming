@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import programasGaleria from '../../data/programasGaleria'
 import './GaleriaProgramas.css'
 
@@ -24,7 +25,7 @@ function GaleriaProgramas() {
             <div className="galeria-programas__lista">
                 {programasGaleria.map((programa) => (
                     <article className="galeria-programas__programa" key={programa.nombre}>
-                        <a href={programa.url} target="_blank" rel="noopener noreferrer">
+                        <Link to={`/programas/${programa.slug}`}>
                             <img
                                 className="galeria-programas__imagen"
                                 src={programa.fondo}
@@ -57,7 +58,7 @@ function GaleriaProgramas() {
                                     loading="lazy"
                                 />
                             </div>
-                        </a>
+                        </Link>
                     </article>
                 ))}
             </div>
