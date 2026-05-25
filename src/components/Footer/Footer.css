@@ -2,7 +2,6 @@
     background-color: var(--bg-color-secundario);
     color: var(--bg-color-primario);
     text-align: center;
-    border-top: 2px solid var(--bg-color-icons);
     z-index: 4000;
     padding: 26px 18px 110px;
 }
