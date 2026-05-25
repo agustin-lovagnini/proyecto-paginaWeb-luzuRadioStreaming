@@ -61,7 +61,7 @@ const programacionResumen = [
     },
     {
         nombre: 'Los no talentos',
-        logo: 'img/programas/programas/los-no-talento/logo-los-no-talentos.webp',
+        logo: 'img/programas/programas/los-no-talentos/logo-los-no-talentos.webp',
         dia: 'jueves',
         horario: '18.30 a 19.30',
     },
