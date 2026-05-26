@@ -8,7 +8,7 @@ Proyecto de practica hecho con React y Vite. Es una migracion paso a paso de una
 
 ### Desktop
 
-![Vista desktop](public/img/readme/vista-descktop/presentacion-index.png)
+![Vista desktop](public/img/readme/vista-desktop/presentacion-index.png)
 
 ### Mobile
 

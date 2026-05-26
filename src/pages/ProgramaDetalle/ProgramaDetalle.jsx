@@ -74,8 +74,10 @@ function ProgramaDetalle() {
                         <p className="programa-detalle__estado">Vivo</p>
 
                         <h1>
-                            {inicioNombre && <>{inicioNombre} </>}
-                            <span>{ultimaPalabraNombre}</span>
+                            {inicioNombre && <span className="programa-detalle__titulo-linea">{inicioNombre}</span>}
+                            <span className="programa-detalle__titulo-linea programa-detalle__titulo-linea--destacada">
+                                {ultimaPalabraNombre}
+                            </span>
                         </h1>
 
                         <nav className="programa-detalle__redes" aria-label={`Redes de ${programa.nombre}`}>
