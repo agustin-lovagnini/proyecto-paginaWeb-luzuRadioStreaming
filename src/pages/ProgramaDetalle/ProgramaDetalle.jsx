@@ -1,13 +1,17 @@
+import { useEffect, useState } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
 import Header from '../../components/Header'
 import Footer from '../../components/Footer'
 import programasGaleria from '../../data/programasGaleria'
+import programacionResumen from '../../data/programacionResumen'
 import redesSociales from '../../data/redesSociales'
+import estaEnVivo from '../../utils/estaEnVivo'
 import './ProgramaDetalle.css'
 
 function ProgramaDetalle() {
     const { slug } = useParams()
     const navegar = useNavigate()
+    const [ahora, setAhora] = useState(() => new Date())
 
     const programa = programasGaleria.find((programa) => programa.slug === slug)
     const equipo = programa?.equipo || [
@@ -15,6 +19,14 @@ function ProgramaDetalle() {
         { nombre: 'Nombre Apellido', rol: 'Panelista' },
         { nombre: 'Nombre Apellido', rol: 'Humor' },
     ]
+
+    useEffect(() => {
+        const intervalo = window.setInterval(() => {
+            setAhora(new Date())
+        }, 60000)
+
+        return () => window.clearInterval(intervalo)
+    }, [])
 
     if (!programa) {
         return (
@@ -27,6 +39,12 @@ function ProgramaDetalle() {
     const palabrasNombre = programa.nombre.split(' ')
     const ultimaPalabraNombre = palabrasNombre.pop()
     const inicioNombre = palabrasNombre.join(' ')
+    const programaResumen = programacionResumen.find((programaResumen) =>
+        programaResumen.nombre === programa.nombre
+        || (programa.slug === 'luzu-activa' && programaResumen.nombre === 'Luzu te activa')
+    )
+    const logoPrograma = programa.logo || programaResumen?.logo
+    const rutaLogoPrograma = logoPrograma?.startsWith('/') ? logoPrograma : `/${logoPrograma}`
     const descripcionPrograma = programa.descripcion || 'El programa que te acompaña en el arranque del dia con humor, actualidad y el mejor equipo. Rompiendo la rutina desde temprano.'
     const redesPrograma = [
         {
@@ -44,6 +62,15 @@ function ProgramaDetalle() {
             color: '#9146ff',
         },
     ].filter((redSocial) => redSocial.url)
+    const programaEstaEnVivo = estaEnVivo(programa, ahora)
+    const programasConHorario = programasGaleria.filter((programaGaleria) => programaGaleria.horario)
+    const indiceProgramaActual = programasConHorario.findIndex((programaGaleria) => programaGaleria.slug === programa.slug)
+    const proximosProgramas = indiceProgramaActual === -1
+        ? programasConHorario.slice(0, 4)
+        : [
+            ...programasConHorario.slice(indiceProgramaActual + 1),
+            ...programasConHorario.slice(0, indiceProgramaActual),
+        ].slice(0, 4)
 
     return (
         <>
@@ -70,8 +97,21 @@ function ProgramaDetalle() {
                                 : 'none',
                     }}
                 >
+                    <div className="programa-detalle__hero-imagen" aria-hidden="true"></div>
+
+                    {rutaLogoPrograma && (
+                        <img
+                            className="programa-detalle__logo programa-detalle__logo--desktop"
+                            src={rutaLogoPrograma}
+                            alt=""
+                            aria-hidden="true"
+                        />
+                    )}
+
                     <div className="programa-detalle__contenido">
-                        <p className="programa-detalle__estado">Vivo</p>
+                        {programaEstaEnVivo && (
+                            <p className="programa-detalle__estado">Vivo</p>
+                        )}
 
                         <h1>
                             {inicioNombre && <span className="programa-detalle__titulo-linea">{inicioNombre}</span>}
@@ -79,6 +119,21 @@ function ProgramaDetalle() {
                                 {ultimaPalabraNombre}
                             </span>
                         </h1>
+
+                        <p className="programa-detalle__horario-hero">
+                            {programa.horario ? (
+                                <>
+                                    <span>{programa.dia}</span>
+                                    <span>{programa.horario}</span>
+                                </>
+                            ) : (
+                                programa.etiqueta
+                            )}
+                        </p>
+
+                        <p className="programa-detalle__descripcion programa-detalle__descripcion--hero">
+                            {descripcionPrograma}
+                        </p>
 
                         <nav className="programa-detalle__redes" aria-label={`Redes de ${programa.nombre}`}>
                             {redesPrograma.map((redSocial) => (
@@ -95,50 +150,54 @@ function ProgramaDetalle() {
                             ))}
                         </nav>
 
-                        <p className="programa-detalle__descripcion programa-detalle__descripcion--hero">
-                            {descripcionPrograma}
-                        </p>
-
-                        <div className="programa-detalle__horario">
-                            {programa.horario ? (
-                                <>
-                                    <span>Horario</span>
-                                    <strong>{programa.horario}</strong>
-                                    <small>{programa.dia}</small>
-                                </>
-                            ) : (
-                                <strong>{programa.etiqueta}</strong>
-                            )}
-                        </div>
+                        {rutaLogoPrograma && (
+                            <img
+                                className="programa-detalle__logo programa-detalle__logo--mobile"
+                                src={rutaLogoPrograma}
+                                alt={`Logo de ${programa.nombre}`}
+                            />
+                        )}
                     </div>
                 </section>
 
                 <section className="programa-detalle__cuerpo">
-                    <p className="programa-detalle__descripcion programa-detalle__descripcion--cuerpo">
-                        {descripcionPrograma}
-                    </p>
+                    <div className="programa-detalle__principal">
+                        <div className="programa-detalle__equipo">
+                            <h2>El equipo</h2>
 
-                    <div className="programa-detalle__equipo">
-                        <h2>El equipo</h2>
-
-                        <div className="programa-detalle__integrantes">
-                            {equipo.map((integrante) => (
-                                <article className="programa-detalle__integrante" key={`${programa.slug}-${integrante.nombre}`}>
-                                    {integrante.foto ? (
-                                        <img
-                                            className="programa-detalle__avatar"
-                                            src={integrante.foto}
-                                            alt={integrante.nombre}
-                                            loading="lazy"
-                                        />
-                                    ) : (
-                                        <div className="programa-detalle__avatar"></div>
-                                    )}
-                                    <h3>{integrante.nombre}</h3>
-                                    <p>{integrante.rol}</p>
-                                </article>
-                            ))}
+                            <div className="programa-detalle__integrantes">
+                                {equipo.map((integrante) => (
+                                    <article className="programa-detalle__integrante" key={`${programa.slug}-${integrante.nombre}`}>
+                                        {integrante.foto ? (
+                                            <img
+                                                className="programa-detalle__avatar"
+                                                src={integrante.foto}
+                                                alt={integrante.nombre}
+                                                loading="lazy"
+                                            />
+                                        ) : (
+                                            <div className="programa-detalle__avatar"></div>
+                                        )}
+                                        <h3>{integrante.nombre}</h3>
+                                        <p>{integrante.rol}</p>
+                                    </article>
+                                ))}
+                            </div>
                         </div>
+
+                        <section className="programa-detalle__proximos" aria-labelledby="programa-detalle-proximos">
+                            <h2 id="programa-detalle-proximos">Proximos programas</h2>
+
+                            <div className="programa-detalle__proximos-lista">
+                                {proximosProgramas.map((proximoPrograma) => (
+                                    <article className="programa-detalle__proximo" key={proximoPrograma.slug}>
+                                        <span>{proximoPrograma.horario}</span>
+                                        <strong>{proximoPrograma.nombre}</strong>
+                                        <p>{proximoPrograma.descripcion}</p>
+                                    </article>
+                                ))}
+                            </div>
+                        </section>
                     </div>
 
                     <aside className="programa-detalle__recientes">

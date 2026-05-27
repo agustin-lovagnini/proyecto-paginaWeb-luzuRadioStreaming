@@ -1,4 +1,7 @@
+import MarqueeModule from 'react-fast-marquee'
 import './MarquesinaOndemand.css'
+
+const Marquee = MarqueeModule.default?.default || MarqueeModule.default || MarqueeModule
 
 const mensajes = [
     'ON DEMAND',
@@ -22,23 +25,21 @@ const mensajes = [
 function MarquesinaOndemand() {
     return (
         <div className="marquesina-ondemand">
-            <div className="marquesina-ondemand__contenido">
+            <Marquee
+                autoFill
+                className="marquesina-ondemand__contenido"
+                gradient={false}
+                pauseOnHover={false}
+                speed={28}
+            >
                 <div className="marquesina-ondemand__grupo">
                     {mensajes.map((mensaje, indice) => (
-                        <span key={`grupo-1-${mensaje}-${indice}`}>
+                        <span key={`${mensaje}-${indice}`}>
                             {mensaje}
                         </span>
                     ))}
                 </div>
-
-                <div className="marquesina-ondemand__grupo" aria-hidden="true">
-                    {mensajes.map((mensaje, indice) => (
-                        <span key={`grupo-2-${mensaje}-${indice}`}>
-                            {mensaje}
-                        </span>
-                    ))}
-                </div>
-            </div>
+            </Marquee>
         </div>
     )
 }

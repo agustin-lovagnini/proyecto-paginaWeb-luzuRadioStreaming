@@ -9,11 +9,6 @@
 
 .marquesina-ondemand__contenido {
     height: 100%;
-    width: max-content;
-    display: flex;
-    align-items: center;
-    animation: marquesina-ondemand 70s linear infinite;
-    will-change: transform;
 }
 
 .marquesina-ondemand__grupo {
@@ -31,14 +26,4 @@
 .marquesina-ondemand__grupo span::before {
     content: "\2022";
     margin-right: 8px;
-}
-
-@keyframes marquesina-ondemand {
-    from {
-        transform: translateX(0);
-    }
-
-    to {
-        transform: translateX(-50%);
-    }
 }
