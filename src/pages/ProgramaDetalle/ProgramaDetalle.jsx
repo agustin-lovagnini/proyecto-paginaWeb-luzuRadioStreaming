@@ -8,6 +8,12 @@ import redesSociales from '../../data/redesSociales'
 import estaEnVivo from '../../utils/estaEnVivo'
 import './ProgramaDetalle.css'
 
+const normalizarNombre = (nombre) =>
+    nombre
+        .normalize('NFD')
+        .replace(/[\u0300-\u036f]/g, '')
+        .toLowerCase()
+
 function ProgramaDetalle() {
     const { slug } = useParams()
     const navegar = useNavigate()
@@ -28,6 +34,10 @@ function ProgramaDetalle() {
         return () => window.clearInterval(intervalo)
     }, [])
 
+    useEffect(() => {
+        window.scrollTo({ top: 0, left: 0, behavior: 'auto' })
+    }, [slug])
+
     if (!programa) {
         return (
             <main className="programa-detalle">
@@ -39,8 +49,9 @@ function ProgramaDetalle() {
     const palabrasNombre = programa.nombre.split(' ')
     const ultimaPalabraNombre = palabrasNombre.pop()
     const inicioNombre = palabrasNombre.join(' ')
+    const nombreProgramaNormalizado = normalizarNombre(programa.nombre)
     const programaResumen = programacionResumen.find((programaResumen) =>
-        programaResumen.nombre === programa.nombre
+        normalizarNombre(programaResumen.nombre) === nombreProgramaNormalizado
         || (programa.slug === 'luzu-activa' && programaResumen.nombre === 'Luzu te activa')
     )
     const logoPrograma = programa.logo || programaResumen?.logo

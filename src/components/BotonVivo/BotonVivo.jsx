@@ -7,6 +7,7 @@ function BotonVivo() {
             target="_blank"
             rel="noopener noreferrer"
             className="boton-vivo-flotante"
+            aria-label="Ver Luzu en vivo"
         >
             <span className="fa-solid fa-circle" aria-hidden="true"></span>
             <span>VIVO</span>

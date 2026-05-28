@@ -1,22 +1,85 @@
 .boton-vivo-flotante {
     position: fixed;
-    right: 20px;
-    bottom: 20px;
+    right: max(16px, env(safe-area-inset-right));
+    bottom: calc(80px + env(safe-area-inset-bottom));
     z-index: 3000;
-    width: 85px;
-    height: 50px;
-    background-color: #e10000;
+    min-width: 92px;
+    min-height: 52px;
+    padding: 0 18px;
+    background: linear-gradient(135deg, rgba(230, 18, 18, 0.95), rgba(175, 0, 0, 0.96));
     color: #ffffff;
-    border: 3px solid var(--bg-color-primario);
-    border-radius: 50px;
-    box-shadow: 3px 4px 7px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.68);
+    border-radius: 999px;
+    box-shadow: 0 10px 22px rgba(0, 0, 0, 0.28);
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 5px;
+    gap: 8px;
     text-decoration: none;
-    font-size: 16px;
+    font-size: 15px;
     font-weight: 700;
+    letter-spacing: 0;
+    line-height: 1;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
+}
+
+.boton-vivo-flotante::before {
+    content: "";
+    position: absolute;
+    inset: 4px;
+    border-radius: inherit;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.18), transparent 50%);
+    pointer-events: none;
+}
+
+.boton-vivo-flotante .fa-solid {
+    position: relative;
+    font-size: 9px;
+    color: #ffffff;
+    filter: drop-shadow(0 0 3px rgba(255, 255, 255, 0.72));
+    animation: boton-vivo-pulso 1.8s ease-in-out infinite;
+}
+
+.boton-vivo-flotante span:last-child {
+    position: relative;
+}
+
+.boton-vivo-flotante:hover,
+.boton-vivo-flotante:focus-visible {
+    transform: translateY(-2px);
+    filter: saturate(1.03);
+    box-shadow: 0 12px 26px rgba(0, 0, 0, 0.32);
+}
+
+.boton-vivo-flotante:active {
+    transform: translateY(0) scale(0.98);
+}
+
+.boton-vivo-flotante:focus-visible {
+    outline: 3px solid #ffffff;
+    outline-offset: 4px;
+}
+
+@keyframes boton-vivo-pulso {
+    0%,
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    50% {
+        transform: scale(1.45);
+        opacity: 0.72;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .boton-vivo-flotante,
+    .boton-vivo-flotante .fa-solid {
+        animation: none;
+        transition: none;
+    }
 }
 
 @media (min-width: 1025px) {
