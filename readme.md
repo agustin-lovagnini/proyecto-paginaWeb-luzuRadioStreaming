@@ -21,6 +21,34 @@ Proyecto de practica hecho con React y Vite. Es una migracion paso a paso de una
 - CSS modular por componente
 - Font Awesome por CDN
 
+## Paleta de colores
+
+### Colores principales
+
+| Uso | Variable / referencia | Color |
+| --- | --- | --- |
+| Fondo principal | `--bg-color-primario` | `#f1f1f1` |
+| Fondo oscuro | `--bg-color-secundario` | `#1c1c1c` |
+| Acento coral | `--bg-color-icons` | `#ff8a80` |
+| Iconos del footer | `--bg-color-icons-footer` | `#9e9e9e` |
+| Blanco | Textos sobre fondos oscuros | `#ffffff` |
+| Negro | Sombras y contrastes | `#000000` |
+
+### Colores de apoyo
+
+| Uso | Color |
+| --- | --- |
+| Turquesa / redes | `#38d1c4` |
+| Amarillo / redes | `#f7c317` |
+| Rosa claro / redes | `#f9d7f2` |
+| Rojo Luzu / acento | `#ea173e` |
+| Verde lima / seccion destacada | `#c6ff00` |
+| Cian detalle programas | `#35f2d0` |
+| Azul detalle programas | `#0b65d8` |
+| Rosa Instagram | `#e1306c` |
+| Rojo YouTube / vivo | `#ff0000` |
+| Violeta Twitch | `#9146ff` |
+
 ## Estructura del proyecto
 
 ```txt
