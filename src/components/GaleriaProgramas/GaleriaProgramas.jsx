@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import programasGaleria from '../../data/programasGaleria'
+import rutaAsset from '../../utils/rutaAsset'
 import './GaleriaProgramas.css'
 
 function GaleriaProgramas() {
@@ -8,16 +9,16 @@ function GaleriaProgramas() {
             <picture className="galeria-programas__fondo">
                 <source
                     media="(min-width: 1920px)"
-                    srcSet="img/fondos/fondos-main/fondo-pagina-index/fondo-main-desktop-2560×1440.webp"
+                    srcSet={rutaAsset('img/fondos/fondos-main/fondo-pagina-index/fondo-main-desktop-2560×1440.webp')}
                     type="image/webp"
                 />
                 <source
                     media="(min-width: 1025px)"
-                    srcSet="img/fondos/fondos-main/fondo-pagina-index/fondo-main-desktop.webp"
+                    srcSet={rutaAsset('img/fondos/fondos-main/fondo-pagina-index/fondo-main-desktop.webp')}
                     type="image/webp"
                 />
                 <img
-                    src="img/fondos/fondos-main/fondo-pagina-index/fondo-main-mobile-tablet.webp"
+                    src={rutaAsset('img/fondos/fondos-main/fondo-pagina-index/fondo-main-mobile-tablet.webp')}
                     alt="Fondo principal de la pagina de inicio de Luzu TV"
                 />
             </picture>

@@ -1,7 +1,9 @@
+import rutaAsset from '../utils/rutaAsset'
+
 const crearEquipo = (carpeta, integrantes) =>
     integrantes.map((integrante) => ({
         ...integrante,
-        foto: `/img/programas/programas/${carpeta}/${integrante.archivo}`,
+        foto: rutaAsset(`img/programas/programas/${carpeta}/${integrante.archivo}`),
     }))
 
 const programasGaleria = [
@@ -321,4 +323,10 @@ const programasGaleria = [
         derechaElenco: '-15px',
     },]
 
-export default programasGaleria
+export default programasGaleria.map((programa) => ({
+    ...programa,
+    fondo: rutaAsset(programa.fondo),
+    elenco: rutaAsset(programa.elenco),
+    heroDetalle: rutaAsset(programa.heroDetalle),
+    heroDetalleMobile: rutaAsset(programa.heroDetalleMobile),
+}))

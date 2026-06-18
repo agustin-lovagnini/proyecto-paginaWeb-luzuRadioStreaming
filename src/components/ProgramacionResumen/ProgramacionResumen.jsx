@@ -1,4 +1,5 @@
 import programacionResumen from '../../data/programacionResumen'
+import rutaAsset from '../../utils/rutaAsset'
 import './ProgramacionResumen.css'
 
 function ProgramacionResumen() {
@@ -7,11 +8,11 @@ function ProgramacionResumen() {
             <picture className="programacion-resumen__fondo">
                 <source
                     media="(min-width: 1025px)"
-                    srcSet="img/fondos/fondos-seccion-galeria-programas/fondo-grilla-desktop.webp"
+                    srcSet={rutaAsset('img/fondos/fondos-seccion-galeria-programas/fondo-grilla-desktop.webp')}
                     type="image/webp"
                 />
                 <img
-                    src="img/fondos/fondos-seccion-galeria-programas/fondo-grilla-mobile.webp"
+                    src={rutaAsset('img/fondos/fondos-seccion-galeria-programas/fondo-grilla-mobile.webp')}
                     alt=""
                     aria-hidden="true"
                     loading="lazy"

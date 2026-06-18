@@ -1,3 +1,4 @@
+import rutaAsset from '../../utils/rutaAsset'
 import './StreamingEnVivo.css'
 
 function StreamingEnVivo() {
@@ -6,12 +7,12 @@ function StreamingEnVivo() {
             <picture className="seccion-streaming-en-vivo__fondo">
                 <source
                     media="(min-width: 1025px)"
-                    srcSet="img/fondos/fondos-seccion-inicial/fondo-streaming-en-vivo-desktop.webp"
+                    srcSet={rutaAsset('img/fondos/fondos-seccion-inicial/fondo-streaming-en-vivo-desktop.webp')}
                     type="image/webp"
                 />
 
                 <img
-                    src="img/fondos/fondos-seccion-inicial/fondo-streaming-en-vivo-mobile-tablet.webp"
+                    src={rutaAsset('img/fondos/fondos-seccion-inicial/fondo-streaming-en-vivo-mobile-tablet.webp')}
                     alt="Fondo de la seccion de streaming en vivo de Luzu TV"
                 />
             </picture>

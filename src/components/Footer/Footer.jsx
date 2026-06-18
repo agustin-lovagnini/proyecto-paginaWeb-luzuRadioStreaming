@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import redesSociales from '../../data/redesSociales'
+import rutaAsset from '../../utils/rutaAsset'
 import './Footer.css'
 
 function Footer() {
@@ -14,7 +15,7 @@ function Footer() {
                     <div className="pie-sitio__logo">
                         <Link to="/">
                             <img
-                                src="/img/logos/logo-footer.webp"
+                                src={rutaAsset('img/logos/logo-footer.webp')}
                                 alt="Logo Luzu TV"
                                 loading="lazy"
                             />

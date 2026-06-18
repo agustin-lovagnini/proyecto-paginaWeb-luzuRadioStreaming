@@ -1,3 +1,5 @@
+import rutaAsset from '../utils/rutaAsset'
+
 const programacionResumen = [
     {
         nombre: 'Luzu te activa',
@@ -99,4 +101,7 @@ const programacionResumen = [
     },
 ]
 
-export default programacionResumen
+export default programacionResumen.map((programa) => ({
+    ...programa,
+    logo: rutaAsset(programa.logo),
+}))

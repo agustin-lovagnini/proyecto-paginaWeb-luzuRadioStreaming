@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import redesSociales from '../../data/redesSociales'
+import rutaAsset from '../../utils/rutaAsset'
 import BotonVivo from '../BotonVivo'
 import './Header.css'
 
@@ -14,7 +15,7 @@ function Header() {
     return (
         <header className="encabezado-sitio">
             <Link to="/" className="encabezado-sitio__logo">
-                <img src="/img/logos/logo-header.webp" alt="Luzu TV" />
+                <img src={rutaAsset('img/logos/logo-header.webp')} alt="Luzu TV" />
             </Link>
 
             <button
@@ -64,7 +65,7 @@ function Header() {
                     className="encabezado-sitio__tienda"
                 >
                     <img
-                        src="/img/logos/diseno-tienda.webp"
+                        src={rutaAsset('img/logos/diseno-tienda.webp')}
                         alt="Tienda de Luzu TV"
                         loading="lazy"
                     />
