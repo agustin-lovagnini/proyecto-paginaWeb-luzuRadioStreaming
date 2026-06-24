@@ -80,9 +80,7 @@ function ProgramacionResumen() {
                                     <span className="programacion-resumen__sombra" aria-hidden="true" />
 
                                     <img
-                                        className={`programacion-resumen__elenco ${
-                                            detalle?.mascaraElenco ? 'programacion-resumen__elenco--mascara' : ''
-                                        }`}
+                                        className="programacion-resumen__elenco"
                                         src={detalle?.elenco}
                                         alt=""
                                         aria-hidden="true"

@@ -157,12 +157,12 @@ text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
     font-size: 18px;
   }
 
-  .encabezado-sitio__redes i,
+  .encabezado-sitio__redes a,
   .encabezado-sitio__tienda {
     transition: transform 0.3s ease;
   }
 
-  .encabezado-sitio__redes a:hover i,
+  .encabezado-sitio__redes a:hover,
   .encabezado-sitio__tienda:hover {
     transform: scale(1.15);
   }

@@ -42,9 +42,9 @@
     background-color: var(--programa-color, #ff756b);
     box-shadow: none;
     transition:
-        flex-grow 0.55s cubic-bezier(0.2, 0.82, 0.2, 1),
-        flex-basis 0.55s cubic-bezier(0.2, 0.82, 0.2, 1),
-        min-width 0.55s cubic-bezier(0.2, 0.82, 0.2, 1),
+        flex-grow 0.85s cubic-bezier(0.2, 0.55, 0.2, 1),
+        flex-basis 0.85s cubic-bezier(0.2, 0.82, 0.2, 1),
+        min-width 0.85s cubic-bezier(0.2, 0.82, 0.2, 1),
         border-color 0.25s ease,
         box-shadow 0.25s ease,
         opacity 0.25s ease;
@@ -52,7 +52,7 @@
 
 .programacion-resumen__item:hover,
 .programacion-resumen__item:focus-within {
-    flex-grow: 8;
+    flex-grow: 4.6;
     flex-basis: 0;
     min-width: 0;
     box-shadow: none;
@@ -91,7 +91,7 @@
     opacity: 0.34;
     mix-blend-mode: multiply;
     transform: scale(1.03);
-    transition: transform 0.55s cubic-bezier(0.2, 0.82, 0.2, 1);
+    transition: transform 0.85s cubic-bezier(0.2, 0.82, 0.2, 1);
 }
 
 .programacion-resumen__item:hover .programacion-resumen__imagen,
@@ -111,7 +111,7 @@
 
 .programacion-resumen__elenco {
     position: absolute;
-    right: -8%;
+    right: 10%;
     bottom: 0;
     z-index: 2;
     width: clamp(150px, 46%, 285px);
@@ -124,11 +124,6 @@
     transition:
         opacity 0.32s ease,
         transform 0.42s ease;
-}
-
-.programacion-resumen__elenco--mascara {
-    -webkit-mask-image: linear-gradient(to left, black 94%, transparent);
-    mask-image: linear-gradient(to left, black 94%, transparent);
 }
 
 .programacion-resumen__item:hover .programacion-resumen__elenco,
@@ -170,9 +165,11 @@
 
 .programacion-resumen__item:hover .programacion-resumen__logo,
 .programacion-resumen__item:focus-within .programacion-resumen__logo {
-    top: clamp(36px, 4vw, 54px);
-    width: min(54%, 220px);
-    height: 70px;
+    top: clamp(12px, 1.3vw, 18px);
+    left: 50%;
+    right: auto;
+    width: min(55%, 260px);
+    height: clamp(72px, 7vw, 120px);
     transform: translateX(-50%);
 }
 
@@ -196,7 +193,15 @@
 
 .programacion-resumen__item:hover .programacion-resumen__meta,
 .programacion-resumen__item:focus-within .programacion-resumen__meta {
+    position: absolute;
+    right: auto;
+    bottom: clamp(14px, 1.5vw, 22px);
+    left: clamp(32px, 5vw, 78px);
+    width: min(38%, 320px);
+    margin-top: 0;
+    align-items: flex-start;
     opacity: 1;
+    text-align: left;
     transform: translateY(0);
     visibility: visible;
 }
@@ -229,18 +234,24 @@
 .programacion-resumen__horario,
 .programacion-resumen__on-demand {
     overflow: hidden;
-    font-size: clamp(13px, 1vw, 20px);
+    font-size: clamp(18px, 1.7vw, 28px);
     font-weight: 900;
     letter-spacing: 0;
     text-overflow: ellipsis;
 }
 
 .programacion-resumen__expandido {
-    display: block;
-    width: min(100%, 430px);
-    margin-top: 12px;
+    position: absolute;
+    top: 50%;
+    left: clamp(40px, 7vw, 96px);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: min(42%, 430px);
+    margin-top: 0;
     opacity: 0;
-    transform: translateY(12px);
+    text-align: left;
+    transform: translateY(calc(-50% + 12px));
     transition:
         opacity 0.28s ease,
         transform 0.28s ease;
@@ -252,14 +263,16 @@
 }
 
 .programacion-resumen__elenco-texto {
-    max-width: 27rem;
+    display: none;
+    max-width: 100%;
     font-size: clamp(13px, 1.2vw, 16px);
     font-weight: 900;
     line-height: 1.18;
 }
 
 .programacion-resumen__descripcion {
-    max-width: 29rem;
+    display: none;
+    max-width: 100%;
     margin-top: 9px;
     font-size: clamp(13px, 1vw, 15px);
     font-weight: 700;
@@ -269,7 +282,7 @@
 .programacion-resumen__item:hover .programacion-resumen__expandido,
 .programacion-resumen__item:focus-within .programacion-resumen__expandido {
     opacity: 1;
-    transform: translateY(0);
+    transform: translateY(-50%);
     transition-delay: 0.16s;
 }
 
@@ -296,8 +309,8 @@
     }
 
     .programacion-resumen__lista:hover .programacion-resumen__item:not(:hover) {
-        flex-grow: 0.42;
-        opacity: 0.72;
+        flex-grow: 0.72;
+        opacity: 0.84;
     }
 
 .programacion-resumen__item:hover .programacion-resumen__meta,

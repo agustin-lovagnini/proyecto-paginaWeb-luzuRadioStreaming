@@ -82,7 +82,6 @@ const programasGaleria = [
         horario: '10.00 a 12.30',
         anchoElenco: '40%',
         derechaElenco: '-7px',
-        mascaraElenco: true,
     },
     {
         nombre: 'El show del verano',
@@ -181,7 +180,6 @@ const programasGaleria = [
         dia: 'Lunes y Miércoles',
         horario: '18.30 a 20.00',
         anchoElenco: '40%',
-        mascaraElenco: true,
     },
     {
         nombre: 'Los del fondo',
@@ -257,7 +255,6 @@ const programasGaleria = [
         horario: '11.00 a 13.00',
         anchoElenco: '45%',
         derechaElenco: '-1px',
-        mascaraElenco: true,
     },
     {
         nombre: 'Algo de música',

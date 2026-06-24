@@ -118,11 +118,6 @@
     z-index: 3;
 }
 
-.galeria-programas__elenco--mascara {
-    -webkit-mask-image: linear-gradient(to left, black 98%, transparent);
-    mask-image: linear-gradient(to left, black 94%, transparent);
-}
-
 @media (min-width: 1025px) {
     .galeria-programas::after {
         background: rgba(255, 255, 255, 0.18);

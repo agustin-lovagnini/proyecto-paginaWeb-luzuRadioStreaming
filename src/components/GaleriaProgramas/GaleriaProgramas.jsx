@@ -47,9 +47,7 @@ function GaleriaProgramas() {
                                 </p>
 
                                 <img
-                                    className={`galeria-programas__elenco ${
-                                        programa.mascaraElenco ? 'galeria-programas__elenco--mascara' : ''
-                                    }`}
+                                    className="galeria-programas__elenco"
                                     style={{
                                         '--ancho-elenco': programa.anchoElenco,
                                         '--derecha-elenco': programa.derechaElenco,
